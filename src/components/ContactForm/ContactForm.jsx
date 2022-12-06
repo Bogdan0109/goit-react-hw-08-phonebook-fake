@@ -23,8 +23,7 @@ export function ContactForm() {
       )
     )
       return alert(`${name} is alredy in contacts`);
-    dispatch(addContacts(name, number));
-    // await addContacts({ name, phone });
+    dispatch(addContacts({ name, number }));
     form.reset();
   };
 
