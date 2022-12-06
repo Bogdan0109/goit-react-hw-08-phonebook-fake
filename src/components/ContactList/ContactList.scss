@@ -1,0 +1,30 @@
+.ContactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 10px;
+  max-width: 450px;
+}
+
+.ContactList__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ContactList__text {
+  min-width: 170px;
+  font-size: 20px;
+}
+
+.ContactList__span {
+  font-size: 20px;
+}
+
+.ContactList__btn {
+  padding: 3px;
+  background-color: transparent;
+  border: 1px solid #9a98988a;
+  border-radius: 5px;
+}
