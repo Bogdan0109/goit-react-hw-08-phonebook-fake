@@ -12,7 +12,6 @@ import { fetchContacts } from 'redux/contacts/operations';
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -24,9 +23,9 @@ export default function Contacts() {
         <Section title={'Phonebook'}>
           <ContactForm />
         </Section>
-        <div>{isLoading && 'Request in progress...'}</div>
         <Section title={'Contacts'}>
           <Filter />
+          {isLoading && <div>Request in progress...</div>}
           <ContactList />
         </Section>
       </Wrapper>
