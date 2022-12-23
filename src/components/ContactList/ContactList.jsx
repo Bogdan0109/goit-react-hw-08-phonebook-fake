@@ -15,14 +15,18 @@ export const ContactList = () => {
   const filteredContacts = contacts.filter(({ name }) =>
     name.toLowerCase().includes(filter.toLowerCase())
   );
+  console.log(
+    '🚀 ~ file: ContactList.jsx:18 ~ ContactList ~ filteredContacts',
+    filteredContacts
+  );
 
   return (
     <>
       <ul className="ContactList">
-        {filteredContacts.map(({ id, name, phone }) => (
+        {filteredContacts.map(({ id, name, number }) => (
           <li key={id} className="ContactList__item">
             <p className="ContactList__text">{name}:</p>
-            <span className="ContactList__span">{phone}</span>
+            <span className="ContactList__span">{number}</span>
             <button
               type="button"
               className="ContactList__btn"
