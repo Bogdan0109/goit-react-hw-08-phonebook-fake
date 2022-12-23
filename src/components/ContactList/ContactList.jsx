@@ -15,10 +15,6 @@ export const ContactList = () => {
   const filteredContacts = contacts.filter(({ name }) =>
     name.toLowerCase().includes(filter.toLowerCase())
   );
-  console.log(
-    '🚀 ~ file: ContactList.jsx:18 ~ ContactList ~ filteredContacts',
-    filteredContacts
-  );
 
   return (
     <>
