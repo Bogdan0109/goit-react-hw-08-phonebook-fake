@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectFilters } from 'redux/filter/selectors';
 import { selectAllContacts, selectLoading } from 'redux/contacts/selectors';
 import { deleteContacts } from 'redux/contacts/operations';
+import { AiFillDelete } from 'react-icons/ai';
+import { BsTelephone } from 'react-icons/bs';
 
 export const ContactList = () => {
   const filter = useSelector(selectFilters);
@@ -21,7 +23,10 @@ export const ContactList = () => {
       <ul className="ContactList">
         {filteredContacts.map(({ id, name, number }) => (
           <li key={id} className="ContactList__item">
-            <p className="ContactList__text">{name}:</p>
+            <div className="ContactList__user">
+              <BsTelephone />
+              <p className="ContactList__text">{name}:</p>
+            </div>
             <span className="ContactList__span">{number}</span>
             <button
               type="button"
@@ -29,7 +34,7 @@ export const ContactList = () => {
               onClick={() => dispatch(deleteContacts(id))}
               disabled={Loading}
             >
-              Удалить
+              <AiFillDelete size={20} />
             </button>
           </li>
         ))}

@@ -13,8 +13,14 @@
   gap: 10px;
 }
 
+.ContactList__user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .ContactList__text {
-  min-width: 170px;
+  // min-width: 170px;
   font-size: 20px;
 }
 
@@ -23,8 +29,13 @@
 }
 
 .ContactList__btn {
-  padding: 3px;
+  padding: 5px;
   background-color: transparent;
-  border: 1px solid #9a98988a;
-  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: color 200ms;
+
+  &:hover {
+    color: red;
+  }
 }

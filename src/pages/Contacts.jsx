@@ -25,7 +25,7 @@ export default function Contacts() {
         </Section>
         <Section title={'Contacts'}>
           <Filter />
-          {isLoading && <div>Request in progress...</div>}
+          {/* {isLoading && <div>Request in progress...</div>} */}
           <ContactList />
         </Section>
       </Wrapper>
