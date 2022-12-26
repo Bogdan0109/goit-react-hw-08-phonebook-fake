@@ -7,3 +7,10 @@
   flex-direction: column;
   margin-bottom: 16px;
 }
+
+.Form__input {
+  padding: 5px 10px;
+  max-width: 200px;
+
+  background-color: #f6bb8a;
+}
