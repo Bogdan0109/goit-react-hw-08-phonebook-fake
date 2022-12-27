@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import css from './LoginForm.module.css';
-import Button from '@mui/material/Button';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme } from 'components/theme/theme';
+// import Button from '@mui/material/Button';
+// import { ThemeProvider } from '@mui/material/styles';
+// import { theme } from 'components/theme/theme';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,8 @@ export const LoginForm = () => {
     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={css.label}>
         Email
-        <input className="Form__input"
+        <input
+          className="Form__input"
           type="email"
           name="email"
           required
@@ -34,7 +35,8 @@ export const LoginForm = () => {
       </label>
       <label className={css.label}>
         Password
-        <input className="Form__input"
+        <input
+          className="Form__input"
           type="password"
           name="password"
           required
@@ -42,7 +44,7 @@ export const LoginForm = () => {
           placeholder="Adrian Cross"
         />
       </label>
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <Button
           className="Form__btn"
           color="secondary"
@@ -51,8 +53,8 @@ export const LoginForm = () => {
         >
           Log In
         </Button>
-      </ThemeProvider>
-      {/* <button type="submit">Log In</button> */}
+      </ThemeProvider> */}
+      <button type="submit">Log In</button>
     </form>
   );
 };

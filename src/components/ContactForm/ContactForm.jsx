@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'redux/contacts/operations';
 import { selectAllContacts } from 'redux/contacts/selectors';
 import './ContactForm.scss';
-import Button from '@mui/material/Button';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme } from 'components/theme/theme';
+// import Button from '@mui/material/Button';
+// import { ThemeProvider } from '@mui/material/styles';
+// import { theme } from 'components/theme/theme';
 
 export function ContactForm() {
   const loginInputId = nanoid();
@@ -54,7 +54,7 @@ export function ContactForm() {
           required
         />
       </label>{' '}
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <Button
           className="Form__btn"
           color="secondary"
@@ -63,10 +63,10 @@ export function ContactForm() {
         >
           Add contact
         </Button>
-      </ThemeProvider>
-      {/* <button className="Form__btn" type="submit">
+      </ThemeProvider> */}
+      <button className="Form__btn" type="submit">
         Add contact
-      </button> */}
+      </button>
     </form>
   );
 }

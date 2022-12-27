@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import css from './RegisterForm.module.css';
-import Button from '@mui/material/Button';
-import { ThemeProvider } from '@mui/material/styles';
-import { theme } from 'components/theme/theme';
+// import Button from '@mui/material/Button';
+// import { ThemeProvider } from '@mui/material/styles';
+// import { theme } from 'components/theme/theme';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ export const RegisterForm = () => {
       <label className={css.label}>
         Username
         <input
-          className="Form__input"
+          className="form__input"
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -56,7 +56,7 @@ export const RegisterForm = () => {
           placeholder="Adrian Cross"
         />
       </label>
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <Button
           className="Form__btn"
           color="secondary"
@@ -65,8 +65,8 @@ export const RegisterForm = () => {
         >
           Register
         </Button>
-      </ThemeProvider>
-      {/* <button type="submit">Register</button> */}
+      </ThemeProvider> */}
+      <button type="submit">Register</button>
     </form>
   );
 };
